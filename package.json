@@ -1,14 +1,15 @@
 {
-  "name": "sempli",
-  "version": "1.0.0",
-  "description": "",
+  "name": "semplice",
+  "version": "0.0.1",
+  "description": "Micro framework basado en Express.js",
   "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+  "bin":{
+    "semplice":"index.js"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "scripts": {},
+  "keywords": ["sempli","framework","micro","node","nodejs","express","middleware"],
+  "author": "Luis Vilches <lvilches21@gmail.com>",
+  "license": "MIT",
   "dependencies": {
     "chalk": "^2.3.0",
     "connect-multiparty": "^2.1.0",
