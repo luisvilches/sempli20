@@ -14,6 +14,8 @@ const moment = require("moment");
 const NodeMailer = require('nodemailer');
 const smtpTransport = require('nodemailer-smtp-transport');
 const transport = NodeMailer.createTransport(smtpTransport(conf.mail));
+const watcher = require("filewatcher")();
+const rebirth = require('rebirth');
 
 const server = http.createServer(app);
 const io = socket(server);
@@ -65,6 +67,14 @@ function main(){
     if(conf.folderPublic != ""){
         static();
     }
+
+    watcher.add(path.join(path.resolve()));
+    
+    watcher.on('change', function(file, stat) {
+        console.log(chalk.cyan('-> Semplice File modified: %s'),chalk.magenta(file));
+        //rebirth();
+        if (!stat) console.log(chalk.red('-> deleted'));
+    });
 }
 
 
