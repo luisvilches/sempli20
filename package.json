@@ -1,13 +1,21 @@
 {
   "name": "semplice",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Micro framework basado en Express.js",
   "main": "index.js",
-  "bin":{
-    "semplice":"index.js"
+  "bin": {
+    "semplice": "index.js"
   },
   "scripts": {},
-  "keywords": ["sempli","framework","micro","node","nodejs","express","middleware"],
+  "keywords": [
+    "sempli",
+    "framework",
+    "micro",
+    "node",
+    "nodejs",
+    "express",
+    "middleware"
+  ],
   "author": "Luis Vilches <lvilches21@gmail.com>",
   "license": "MIT",
   "dependencies": {
@@ -15,8 +23,12 @@
     "connect-multiparty": "^2.1.0",
     "cors": "^2.8.4",
     "express": "^4.16.2",
+    "jwt-simple": "^0.5.1",
+    "mail": "^0.2.3",
+    "moment": "^2.19.1",
     "mongoose": "^4.13.0",
-    "socket.io": "^2.0.4",
-    "winston": "^2.4.0"
+    "nodemailer": "^4.3.1",
+    "nodemailer-smtp-transport": "^2.7.4",
+    "socket.io": "^2.0.4"
   }
 }
